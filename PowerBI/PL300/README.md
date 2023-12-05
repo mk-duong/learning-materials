@@ -8,7 +8,7 @@ Learning notes to prepare for PL-300 certificate
 - **Power BI Mobile** for on-the-go access to the Power BI service content, designed for mobile.
 - ****Refresh data****
     
-    ![Untitled](PowerBI/PL300/images/Untitled.png)
+    ![Untitled](images/Untitled.png)
     
 
 - **What is a collection of reports and dashboards called in Power BI?**
@@ -69,7 +69,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
 
 ****Get data from Azure Analysis Services****
 
-![Untitled](PowerBI/PL300/images/Untitled%202.png)
+![Untitled](images/Untitled%202.png)
 
 - Similar to getting data from SQL Server:
     - Authenticate to the server.
@@ -89,15 +89,15 @@ But let’s say, for security reasons, you aren't allowed to import local copies
     - *Query folding* is the process by which the transformations and edits that you make in Power Query Editor are simultaneously tracked as native queries, or simple **Select** SQL statements, while you're actively making transformations.
     - If the **View Native Query** option isn't available → query folding isn't possible for this step
         
-        ![Untitled](PowerBI/PL300/images/Untitled%203.png)
+        ![Untitled](images/Untitled%203.png)
         
     - Tips: If you can translate a transformation into a **Select** statement, which includes operators and clauses such as GROUP BY, SORT BY, WHERE, UNION ALL, and JOIN → you can use query folding.
 - ****Query diagnostics****
     - Useful when you want to analyze performance on the Power Query side: loading datasets, running data refreshes, or running other transformative tasks, etc.
         
-        ![Untitled](PowerBI/PL300/images/Untitled%204.png)
+        ![Untitled](images/Untitled%204.png)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%205.png)
+        ![Untitled](images/Untitled%205.png)
         
 - ****Other techniques to optimize performance****
     - **Process as much data as possible in the original data source.**
@@ -128,7 +128,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
 - Unpivot/Pivot columns
 - Replace nulls
     
-    ![Untitled](PowerBI/PL300/images/Untitled%206.png)
+    ![Untitled](images/Untitled%206.png)
     
 - Best practices for naming tables, columns, and values
     - Descriptive business terms
@@ -165,9 +165,9 @@ But let’s say, for security reasons, you aren't allowed to import local copies
 
 - Each time you shape data in Power Query, you create a step → The combined steps are available in Power Query Advanced Editor
     
-    ![Untitled](PowerBI/PL300/images/Untitled%208.png)
+    ![Untitled](images/Untitled%208.png)
     
-    ![08-m-code (2).png](PowerBI/PL300/images/08-m-code_(2).png)
+    ![08-m-code (2).png](images/08-m-code_(2).png)
 
 **Lab: Transform and load data**
 
@@ -252,7 +252,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             - comprises of tables
             - It can also include relationships, hierarchies, and calculations.
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2011.png)
+            ![Untitled](images/Untitled%2011.png)
             
         - **PBI dataset:** a model published to a workspace in PBI Service ⇒ dataset
             - Some datasets represent connections to external-hosted models in AAS or SSAS
@@ -351,7 +351,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         
         - When you set up an import table with incremental refresh, you can enable the **Get the latest data in real-time with DirectQuery** option.
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2012.png)
+            ![Untitled](images/Untitled%2012.png)
             
         - By enabling this option, Power BI automatically creates a table partition that uses DirectQuery storage mode.
         - In this case, the table becomes a **hybrid table**, meaning it has import partitions to store older data, and a single DirectQuery partition for current data.
@@ -432,27 +432,27 @@ But let’s say, for security reasons, you aren't allowed to import local copies
     - ****Hierarchies****
         - Values of the date type auto entered as a hierarchy (if the table has not been marked as a date table)
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2014.png)
+            ![Untitled](images/Untitled%2014.png)
             
         - Consider that you want to create a stacked bar chart of **Total Sales by Category and Subcategory →** create a hierarchy in the **Product** table for categories and subcategories.
             - Right-click **Category Name** > **New hierarchy**
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2015.png)
+                ![Untitled](images/Untitled%2015.png)
                 
             - Drag and drop the **Subcategory** column into this new hierarchy
             - In **Properties** pane > scroll down > select **Apply Level Changes** for hierarchy
             - Visualize
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2016.png)
+                ![Untitled](images/Untitled%2016.png)
                 
             - Drill down on the visual to view both **Category** and **Subcategory**
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2017.png)
+                ![Untitled](images/Untitled%2017.png)
                 
     
     - ****Parent-child hierarchy:**** multiple employees can have the same manager, manager is “child” of another manager
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2018.png)
+        ![Untitled](images/Untitled%2018.png)
         
         → Your responsibility to "flatten" it so that you can see more data granularity.
         
@@ -464,7 +464,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             Path = PATH(Employee[Employee ID], Employee[Manager ID])
             ```
             
-            ![Roger M (ID 1013) ← Pam H (ID 1011) is his manager ← Roy F (ID 1010) is her manager](PowerBI/PL300/images/Untitled%2019.png)
+            ![Roger M (ID 1013) ← Pam H (ID 1011) is his manager ← Roy F (ID 1010) is her manager](images/Untitled%2019.png)
             
             Roger M (ID 1013) ← Pam H (ID 1011) is his manager ← Roy F (ID 1010) is her manager
             
@@ -482,7 +482,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         Level 3 = PATHITEM(Employee[Path],3)
         ```
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2020.png)
+        ![Untitled](images/Untitled%2020.png)
         
         - Create a hierarchy as did previously
         
@@ -490,7 +490,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         - A **role-playing dimension** is a dimension that can filter related facts differently.
         - For example, at Adventure Works, the date dimension table has three relationships to the **FactResellerSales** table.
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2021.png)
+            ![Untitled](images/Untitled%2021.png)
             
             → You have a table named **FactResellerSales** that includes two date columns, **OrderDateKey** and **ShipDateKey.** 
             
@@ -528,24 +528,24 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         - Lowest level of time-based detail that the **Sales** table goes into is by day, for instance 5/1/2020, 6/7/2020, and 6/18/2020.
         - The **Budget** table only goes to the monthly level, for instance, the budget data is 5/2020 and 6/2020.
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2022.png)
+            ![Untitled](images/Untitled%2022.png)
             
             As shown in the preceding figure, a relationship between Budget and Calendar is missing. 
             
             Current columns of 2 tables:
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2023.png)
+            ![Untitled](images/Untitled%2023.png)
             
             - Concatenate the **Year** and **Month** columns of the **Budget** table
             - Change **MonthYear** column’s data type to Date type (auto create hierarchy)
             - Change format to dd/mm/yyyy ****(auto generates 1st of each month)
             - Create the relationship: **MonthYear** column of **Budget** table - **Date** column of **Calendar** table
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2024.png)
+                ![Untitled](images/Untitled%2024.png)
                 
             - Visualize
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2025.png)
+                ![Untitled](images/Untitled%2025.png)
                 
     
     - **Lab: Model data in Power BI Desktop**
@@ -561,25 +561,25 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             
             *2 columns are now inside a folder **Formatting***
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2027.png)
+            ![Untitled](images/Untitled%2027.png)
             
         
         - **Category**
             
             *Data categorization can provide hints to the report designer. In this case, categorizing the column as country or region* (🌐) *provides more accurate information to Power BI when it renders a map visualization.*
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2028.png)
+            ![Untitled](images/Untitled%2028.png)
             
         
         - ****Create a many-to-many relationship:**** [Read this section carefully](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/03-configure-data-model-in-power-bi-desktop.html#review-the-model-interface-1)
             
             *Consider that the **Salesperson** table filters the **Sales** table. It also filters the **SalespersonRegion** table, but it doesn't continue by propagating filters to the **Region** table (the arrowhead is pointing the wrong direction btw SalespersonRegion and Region).*
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2029.png)
+            ![Untitled](images/Untitled%2029.png)
             
             *After configuring, relationship has double-arrow head and the other relationship is inactive.*
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2030.png)
+            ![Untitled](images/Untitled%2030.png)
             
         
         **Understanding the lab then come back to this [module](https://learn.microsoft.com/en-us/training/modules/design-model-power-bi/6-relationships-cardinality) can help understanding section *Cross-filter direction &* *Cardinality and cross-filter direction* better.**
@@ -600,7 +600,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             - What-if calculated tables aren't related to other model tables.
     - Calculated columns: Add New Column > include calculations
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2031.png)
+    ![Untitled](images/Untitled%2031.png)
     
     - Measures
         - Measures don't store values in the model.
@@ -748,7 +748,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         
         **Work with Filter Context:** Matrix visual
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2032.png)
+        ![Untitled](images/Untitled%2032.png)
         
         - Sales % All Region
             
@@ -797,7 +797,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
                 )
                 ```
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2033.png)
+                ![Untitled](images/Untitled%2033.png)
                 
                 *The IF() function uses the ISINSCOPE() function to test **whether the region column is the level in a hierarchy of levels**. When true, the DIVIDE() function is evaluated.*
                 
@@ -818,7 +818,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             )
             ```
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2034.png)
+            ![Untitled](images/Untitled%2034.png)
             
             - To improve the readability of measure **Sales % Group**
             
@@ -840,7 +840,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
             )
             ```
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2035.png)
+            ![Untitled](images/Untitled%2035.png)
             
         
         **Work with Time Intelligence**
@@ -852,7 +852,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         TOTALYTD(SUM(Sales[Sales]), 'Date'[Date], "6-30")
         ```
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2036.png)
+        ![Untitled](images/Untitled%2036.png)
         
         *The TOTALYTD() function evaluates an expression—in this case the sum of the **Sales** column—over a given date column. The date column must belong to a date table marked as a date table, as was done in the **Create DAX Calculations in Power BI Desktop** lab.*
         
@@ -880,7 +880,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
          )
         ```
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2037.png)
+        ![Untitled](images/Untitled%2037.png)
         
         *PARALLELPERIOD() function to shift 12 months back from each date in filter context.*
         
@@ -897,7 +897,7 @@ But let’s say, for security reasons, you aren't allowed to import local copies
         - **Visual display** - The time it took for the visual to render on the screen, including the time required to retrieve web images or geocoding.
         - **Other** - The time it took the visual to prepare queries, wait for other visuals to complete, or perform other background processing tasks. (If displays a long duration → optimize DAX queries for other visuals, or reduce the number of visuals in the report).
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2038.png)
+        ![Untitled](images/Untitled%2038.png)
         
     - To analyze your queries in more detail → DAX Studio (open-source tool)
 
@@ -942,23 +942,23 @@ But let’s say, for security reasons, you aren't allowed to import local copies
 
 Ex: Aggregate this sales data at the day level
 
-![Untitled](PowerBI/PL300/images/Untitled%2039.png)
+![Untitled](images/Untitled%2039.png)
 
 - If you have access to the database, you could create a table/view with the aggregation and then import that table/view into Power BI Desktop.
 - In PBI Desktop, you can use Power Query Editor to create the aggregations step-by-step.
     - Choose Columns > **OrderDate,** **OrderQuantity,** **SalesAmount** columns
     - Group By
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2040.png)
+        ![Untitled](images/Untitled%2040.png)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2041.png)
+        ![Untitled](images/Untitled%2041.png)
         
 
 ### ****Build PBI visuals and reports****
 
 - **Scope**
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2042.png)
+    ![Untitled](images/Untitled%2042.png)
     
     ****Dashboard**** 
     
@@ -991,31 +991,31 @@ Ex: Aggregate this sales data at the day level
     - ****Placement**** left to right and top to bottom
     - ****Balance**** a page to have one large visual to draw initial attention → then supported by smaller visuals that provide context
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2043.png)
+        ![Untitled](images/Untitled%2043.png)
         
     - ****Proximity**** related visuals are placed near one another
     - ****Contrast**** emphasize important objects
     - ****Repetition**** Many key metrics are presented in single-value cards → this design allows report consumers to quickly understand and interpret the metrics.
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2044.png)
+        ![Untitled](images/Untitled%2044.png)
         
     
     **Margin & Alignment**
     
     - ****Margins****
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2045.png)
+        ![Untitled](images/Untitled%2045.png)
         
     - ****Alignment****
         - Alignment of titles and legends *within visuals* should be consistent
         - When multiple visuals are on the report page → spacings between visuals should be consistent
             - ****Implied sections:**** aligning groups of visuals in close proximity
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2046.png)
+                ![Untitled](images/Untitled%2046.png)
                 
             - ****Explicit sections:**** colored background shapes and spacing (highlighted with shading) separate the visuals into three sections
                 
-                ![Untitled](PowerBI/PL300/images/Untitled%2047.png)
+                ![Untitled](images/Untitled%2047.png)
                 
         
     
@@ -1025,25 +1025,25 @@ Ex: Aggregate this sales data at the day level
         
         If missing values are a possibility, a column chart might be a better visual choice because it will help to avoid the interpretation of a non-existent trend.
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2048.png)
+        ![Untitled](images/Untitled%2048.png)
         
     
     - ****Proportional visuals****
         
         If necessary, you can reveal the actual values in a tooltip
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2049.png)
+        ![Untitled](images/Untitled%2049.png)
         
     
     - ****Grid visuals****
         - Table: A table doesn't support drill down to reveal detailed values
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2050.png)
+            ![Untitled](images/Untitled%2050.png)
             
         - Matrix: A matrix visual allows drill down on the columns and rows to reveal detailed values
             - Can turn off stepped layout
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2051.png)
+            ![Untitled](images/Untitled%2051.png)
             
         - Conditional formatting for grid visuals:
             - Background color
@@ -1053,7 +1053,7 @@ Ex: Aggregate this sales data at the day level
         
     - ****Performance visuals:****
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2052.png)
+        ![Untitled](images/Untitled%2052.png)
         
         - Gauge
         - [KPI](https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/8-kpi)
@@ -1072,7 +1072,7 @@ Ex: Aggregate this sales data at the day level
         - Apply a new filter
         - Change the filter type: from basic to advanced (unless disabled for the report)
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2053.png)
+            ![Untitled](images/Untitled%2053.png)
             
         - Search for values to filter by (unless disabled for the report)
     - **Top N** filtering can only be achieved in the Filters pane
@@ -1087,15 +1087,15 @@ Ex: Aggregate this sales data at the day level
     
     **Relative Date/Time** can also be used for slicer ****
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2054.png)
+    ![Untitled](images/Untitled%2054.png)
     
     ****Sync slicers****
     
     - Click on a slicer visual > **View** ribbon tab > **Show Panes** group > **Sync Slicers**
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2055.png)
+        ![Untitled](images/Untitled%2055.png)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2056.png)
+        ![Untitled](images/Untitled%2056.png)
         
     
     ### **Cross filter (or cross highlighting)**
@@ -1103,7 +1103,7 @@ Ex: Aggregate this sales data at the day level
     - Report consumers: can temporarily cross filter visuals on the report page by selecting one or more elements in a visual
     - Ex: select a single or multiple bars
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2057.png)
+        ![Untitled](images/Untitled%2057.png)
         
     - Report author:
         - By default, cross filtering (or cross highlighting) works between any two visuals
@@ -1119,7 +1119,7 @@ Ex: Aggregate this sales data at the day level
         
         Stop the filters from a slicer propagating to a visual: **Format** ribbon > **Edit interactions**
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2058.png)
+        ![Untitled](images/Untitled%2058.png)
         
     - ****Drill-through****
     - ****Report tooltip****
@@ -1130,7 +1130,7 @@ Ex: Aggregate this sales data at the day level
     - Automatically applies the settings when the report consumer reopens the report
     - Revert to default filters:
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2059.png)
+        ![Untitled](images/Untitled%2059.png)
         
         If the **Reset to default** button is not available → persistent filters is disabled for the report.
         
@@ -1140,7 +1140,7 @@ Ex: Aggregate this sales data at the day level
     - [In slicer](https://learn.microsoft.com/en-us/power-bi/create-reports/buttons-apply-all-clear-all-slicers?tabs=powerbi-desktop)
     - [In Filters pane](https://learn.microsoft.com/en-us/power-platform-release-plan/2020wave2/power-bi/apply-all-button-report-filters)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2060.png)
+        ![Untitled](images/Untitled%2060.png)
         
     
     <aside>
@@ -1166,11 +1166,11 @@ Ex: Aggregate this sales data at the day level
 - Conditional formatting
 - Overlaid analytics (trend lines)
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2061.png)
+    ![Untitled](images/Untitled%2061.png)
     
 - Anomaly detection [link](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-anomaly-detection)
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2062.png)
+    ![Untitled](images/Untitled%2062.png)
     
 - Specialized visuals
     
@@ -1193,17 +1193,17 @@ Ex: Aggregate this sales data at the day level
     
     → Understand “Data” bookmark state
     
-    ![Screenshot (2392).png](PowerBI/PL300/images/Screenshot_(2392).png)
+    ![Screenshot (2392).png](images/Screenshot_(2392).png)
     
 
 ****Visual headers****
 
-![Untitled](PowerBI/PL300/images/Untitled%2063.png)
+![Untitled](images/Untitled%2063.png)
 
 - Always leave sufficient space for the visual headers to appear in the upper-right section of objects.
 - Turns off visual headers for objects that don't need them
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2064.png)
+    ![Untitled](images/Untitled%2064.png)
     
 - Disable all visual header icons would include the **More options** (**...**) menu
     
@@ -1217,13 +1217,13 @@ Ex: Aggregate this sales data at the day level
     - Configure these buttons to use the **Information** or **Help** icon.
 - Visual header tooltip icon
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2065.png)
+    ![Untitled](images/Untitled%2065.png)
     
 - Button overlay
     - Use buttons and bookmarks to overlay an image, shape, or text box that provides built-in assistance.
     - Ex: Create a bookmark to swap visuals
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2066.png)
+    ![Untitled](images/Untitled%2066.png)
     
 
 ### ****Create dashboards in PBI****
@@ -1233,7 +1233,7 @@ Ex: Aggregate this sales data at the day level
 - PBI service only
 - Can only be set on specific visuals such as KPI cards, gauges, and cards.
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2067.png)
+    ![Untitled](images/Untitled%2067.png)
     
 
 ****Review Quick insights****
@@ -1241,11 +1241,11 @@ Ex: Aggregate this sales data at the day level
 - PBI service only
 - Only works with data that is imported to Power BI
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2068.png)
+    ![Untitled](images/Untitled%2068.png)
     
 - Can add Quick insights result to your dashboard by selecting **Pin visual**
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2069.png)
+    ![Untitled](images/Untitled%2069.png)
     
 
 ****Dashboard theme****
@@ -1267,7 +1267,7 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 
 **Display refresh time on a dashboard tile**
 
-![Untitled](PowerBI/PL300/images/Untitled%2070.png)
+![Untitled](images/Untitled%2070.png)
 
 ### Perform analytics in PBI
 
@@ -1277,7 +1277,7 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 - **Histogram**
     - From a bar chart > Group your numerical and time field data into "bins" of equal size
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2071.png)
+        ![Untitled](images/Untitled%2071.png)
         
 - **Identify outliers:** [link](https://learn.microsoft.com/en-us/training/modules/perform-analytics-power-bi/3-visuals/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.build-power-bi-visuals-reports)
     - Scatter plot
@@ -1288,9 +1288,9 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 - **Clustering:** [link](https://learn.microsoft.com/en-us/training/modules/perform-analytics-power-bi/5-clustering-techniques)
 - ****Group data:****
 
-![Untitled](PowerBI/PL300/images/Untitled%2072.png)
+![Untitled](images/Untitled%2072.png)
 
-![Untitled](PowerBI/PL300/images/Untitled%2073.png)
+![Untitled](images/Untitled%2073.png)
 
 **Time series analysis:**
 
@@ -1301,30 +1301,30 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 - Options that are available will depend on the data point selected.
 - (**+**) icon to add it to your report
 
-![Untitled](PowerBI/PL300/images/Untitled%2074.png)
+![Untitled](images/Untitled%2074.png)
 
 ****Create what-if parameters:**** [link](https://learn.microsoft.com/en-us/training/modules/perform-analytics-power-bi/8-what-if-parameters)
 
-![Untitled](PowerBI/PL300/images/Untitled%2075.png)
+![Untitled](images/Untitled%2075.png)
 
 ****Specialized visuals:**** [link](https://learn.microsoft.com/en-us/training/modules/perform-analytics-power-bi/9-use-specialized-visuals)
 
 - Key influencers
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2076.png)
+    ![Untitled](images/Untitled%2076.png)
     
 - Decomposition tree
     - Lock icon: split added by report author
     - Light bulb icon: split suggested by AI
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2077.png)
+    ![Untitled](images/Untitled%2077.png)
     
 - Q&A visual
     - To optimize the Q&A → enhance the semantic model with synonyms and terms.
     - Hide fields, such as fields that are used in model relationships → restrict their use in Q&A.
     - Add suggested questions that become prompts in the **Q&A** visual.
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2078.png)
+        ![Untitled](images/Untitled%2078.png)
         
 
 ### Paginated report
@@ -1344,13 +1344,13 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 
 - Monitor usage and performance
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2079.png)
+    ![Untitled](images/Untitled%2079.png)
     
 - Deployment pipeline (Premium): Dev - Test - Prd
 - View data lineage
 - Sensitivity labels
     
-    ![Untitled](PowerBI/PL300/images/Untitled%2080.png)
+    ![Untitled](images/Untitled%2080.png)
     
 
 **Semantic model**
@@ -1373,24 +1373,24 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
         2. Add two new parameters: **RangeStart** and **RangeEnd**
         3. **Current Value** → configure the start and end of where incremental refresh should occur
             
-            ![Untitled](PowerBI/PL300/images/Untitled%2081.png)
+            ![Untitled](images/Untitled%2081.png)
             
         
         ****Apply the filter****
         
         Go to the applicable **Date** column > select **Custom Filter**
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2082.png)
+        ![Untitled](images/Untitled%2082.png)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2083.png)
+        ![Untitled](images/Untitled%2083.png)
         
         ****Define the incremental refresh policy****
         
         Right-click the applicable table > select **Incremental refresh**
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2084.png)
+        ![Untitled](images/Untitled%2084.png)
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2085.png)
+        ![Untitled](images/Untitled%2085.png)
         
         **Publish to Power BI service**
         
@@ -1403,7 +1403,7 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
     - Promotion does not need specific permissions
     - Certification requires permission from the semantic model owner to access to the semantic model
         
-        ![Untitled](PowerBI/PL300/images/Untitled%2086.png)
+        ![Untitled](images/Untitled%2086.png)
         
 
 ---
