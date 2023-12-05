@@ -1,20 +1,20 @@
 ## [Data Modeling for Power BI](https://www.youtube.com/watch?v=MrLnibFTtbA)
 
-### Content
+### Contents:
 - What is a Star Schema?
 - Building Facts and Dimensions
 - Understanding Relationships
 - Role-playing Dimensions
 - Calculation Groups
 
-### Exercises
+### Exercises:
 Use the `Sales` fact table from [student files](https://prag.works/202208-LWTN-Files):
 - Create a star schema model
 - Create relationships between fact and dimension tables
 
     ![image](https://github.com/mk-duong/learning-materials/assets/151535478/efa2f08b-4a98-429d-89f0-acd9f9c3bcf9)
 
-### Course note
+### Course notes:
 - If theres no ProductID in fact table, then create SK (using index) when making dimension table
 
 - Geography can be separate into a table so that if more fact tables are to be create in the future => can join them easily
