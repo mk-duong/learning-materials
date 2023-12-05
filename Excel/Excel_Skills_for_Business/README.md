@@ -40,3 +40,8 @@
 
 - Advanced conditional formating:
   + Highlight the entire row of the students at the same Campus
+
+![Screenshot (2553)](https://github.com/mk-duong/learning-materials/assets/151535478/6cffc952-7348-464c-83ff-7e0bdd08952f) 
+
+![Screenshot (2554)](https://github.com/mk-duong/learning-materials/assets/151535478/d20e0157-0bb1-4ffb-b74d-ab3663465aa7)
+
