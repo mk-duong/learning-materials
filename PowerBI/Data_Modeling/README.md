@@ -8,8 +8,8 @@
 - Calculation Groups
 
 ### Exercises:
-Use the `Sales` fact table from [student files](https://prag.works/202208-LWTN-Files):
-- Create a star schema model
+Import the `Sales.csv` from [student files](https://prag.works/202208-LWTN-Files) into Power BI:
+- Create a star schema model using Power Query Editor
 - Create relationships between fact and dimension tables
 
     ![image](https://github.com/mk-duong/learning-materials/assets/151535478/efa2f08b-4a98-429d-89f0-acd9f9c3bcf9)
