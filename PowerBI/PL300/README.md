@@ -1,5 +1,4 @@
-# Learn Power BI
-Learning notes to prepare for PL-300 certificate
+## [PL-300](https://learn.microsoft.com/en-us/credentials/certifications/power-bi-data-analyst-associate/?source=learn)
 
 ### Get started in PBI Service
 

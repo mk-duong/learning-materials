@@ -1,11 +1,3 @@
-# Learn Excel
-This repository records all basic to advanced Excel exercises and analysis projects I've completed for both on-campus learning and Coursera online courses.
-
-## Courses
-- **Business Computing Skills (BA120IU):** [Exercise folder](https://github.com/mk-duong/learn-excel/tree/main/Business%20Computing%20Skill)
-  
-- **Excel Skills for Business:** [Exercise folder](https://github.com/mk-duong/learn-excel/tree/main/Excel%20Skills%20for%20Business%3A%20Intermediate%20I)
-
 ## Summary of knowledge
 - Data cleaning:
   + Sorting & filtering
