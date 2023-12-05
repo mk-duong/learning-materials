@@ -8,11 +8,18 @@
 - Calculation Groups
 
 ### Exercises:
-Import the `Sales.csv` from [student files](https://prag.works/202208-LWTN-Files) into Power BI:
-- Create a star schema model using Power Query Editor
-- Create relationships between fact and dimension tables
+Import `Sales.csv` and `FactBudget.csv` from [student files](https://prag.works/202208-LWTN-Files) into Power BI:
 
-    ![image](https://github.com/mk-duong/learning-materials/assets/151535478/efa2f08b-4a98-429d-89f0-acd9f9c3bcf9)
+![Screenshot (2560)](https://github.com/mk-duong/learning-materials/assets/151535478/9bd1ec05-a685-4b82-b214-2001cfba03c9)
+
+- Rename the Sales table to FactSales 
+- From the FactSales table, create a star schema model using Power Query Editor
+- Create relationships between fact and dimension tables
+- Transform the FactBudget table so that relationships to the created dimension tables can be created
+
+Results:
+
+![image](https://github.com/mk-duong/learning-materials/assets/151535478/efa2f08b-4a98-429d-89f0-acd9f9c3bcf9)
 
 ### Course notes:
 - If theres no ProductID in fact table, then create SK (using index) when making dimension table
