@@ -1,4 +1,5 @@
 # Learn Power BI
+Learning notes to prepare for PL-300 certificate
 
 ### Get started in PBI Service
 
