@@ -30,3 +30,13 @@
 - Add a slicer to sync filter between pivot elements
 
   ![Screenshot (2544)](https://github.com/mk-duong/learn-excel/assets/151535478/9d508c4a-f4bd-46c2-8040-93e0b2058a0c)
+
+## Challenge 4
+- Create data validation with:
+  + List, Whole Number, Decimal, Date
+  + Custom formula
+     + Validate to avoid duplicated student number: `=COUNTIFS(Student_number,C8)<=1`
+     + Validate to have the birth year not to have the students less  than 16 years old: `=YEAR(TODAY())-J9>16`
+
+- Advanced conditional formating:
+  + Highlight the entire row of the students at the same Campus
