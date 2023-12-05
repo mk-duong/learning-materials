@@ -12,8 +12,8 @@
 
 ## Challenge 2
 **Note:** `@` reference appears because we're working in a table
-- Calculate the *ValTrade ($m)* using formula: `=[@Price] * [@Volume] / 1000000`
-- Calculate the *TradeRange (%)* using formula: `=([@High] - [@Low]) / [@Price]`
+- Calculate the *ValTrade ($m)* using formula: `= [@Price] * [@Volume] / 1000000`
+- Calculate the *TradeRange (%)* using formula: `= ([@High] - [@Low]) / [@Price]`
   
 - Create **Total** row in a table
   
@@ -35,8 +35,8 @@
 - Create data validation with:
   + List, Whole Number, Decimal, Date
   + Custom formula
-     + Validate to avoid duplicated student number: `=COUNTIFS(Student_number, C8) <= 1`
-     + Validate to have the birth year not to have the students less  than 16 years old: `=YEAR(TODAY()) - J9 > 16`
+     + Validate to avoid duplicated student number: `= COUNTIFS(Student_number, C8) <= 1`
+     + Validate to have the birth year not to have the students less  than 16 years old: `= YEAR(TODAY()) - J9 > 16`
 
 - Advanced conditional formating:
   + Highlight the entire row of the students at the same Campus
