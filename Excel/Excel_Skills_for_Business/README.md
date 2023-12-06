@@ -75,7 +75,7 @@ Use conditional functions (IF, AND, OR) and create nested IF functions
   
     ```=IF(T12<=$P$4, "Fail", IF(T12<=$P$5, "Pass", IF(T12<=$P$6, "Credit", IF(T12<=$P$7, "Distinction", "High Distinction"))))```
 
-  ![Screenshot (2564)](https://github.com/mk-duong/learning-materials/assets/151535478/f3698c5f-bcd5-4116-9e3b-f35fa4e297b8)
+  ![Screenshot (2582)](https://github.com/mk-duong/learning-materials/assets/151535478/b0ad8903-e10c-42c9-8f92-adea0493b47b)
 
 - Task 3:
   + Complete the *Delivery* column, delivering as much of the clients order as possible according to the amounts in stock:
@@ -90,7 +90,8 @@ Use conditional functions (IF, AND, OR) and create nested IF functions
 
     ```=IF(Z6-AD6 >= AA6, "", IF(AD6 < AC6, "Order immediately for client", "Running low - think about reordering"))```
 
-  ![Screenshot (2566)](https://github.com/mk-duong/learning-materials/assets/151535478/b0722439-1aec-452e-8474-f39b9266ff49)
+  ![Screenshot (2584)](https://github.com/mk-duong/learning-materials/assets/151535478/8485d0bc-f340-40f1-a91d-8c479e6fb112)
+
 
 ## Challenge 6
 Work with CHOOSE, VLOOKUP, MATCH, and INDEX
@@ -99,7 +100,8 @@ Work with CHOOSE, VLOOKUP, MATCH, and INDEX
 
   ```=CHOOSE(D3,Instructions!$C$27,Instructions!$C$28,Instructions!$C$29,Instructions!$C$30,Instructions!$C$31,Instructions!$C$32)```
   
-  ![Screenshot (2570)](https://github.com/mk-duong/learning-materials/assets/151535478/28277465-7478-4680-aabb-c65d03f46199)
+  ![Screenshot (2586)](https://github.com/mk-duong/learning-materials/assets/151535478/967ef625-bc74-47db-84a7-6d580282dcd2)
+
 
 - Task 2: Use the VLOOKUP function to perform the grading of students who took a Basic Excel course
 
@@ -107,17 +109,20 @@ Work with CHOOSE, VLOOKUP, MATCH, and INDEX
 
   ```=VLOOKUP(I3,$H$14:$J$18,3,TRUE)```
 
-  ![Screenshot (2573)](https://github.com/mk-duong/learning-materials/assets/151535478/ac243365-6691-49f9-a29a-c41876e96e9b)
+  ![Screenshot (2588)](https://github.com/mk-duong/learning-materials/assets/151535478/6a19926c-5cd0-437f-8201-b44c6e22c17f)
+
 
 - Task3: Use an exact match VLOOKUP and MATCH to gauge the success of Brad's fishing expedition he is planning in March
 
   ```=VLOOKUP(M3, $M$9:$Y$41, MATCH(N3, $M$8:$Y$8, 0), FALSE)```
 
-  ![Screenshot (2577)](https://github.com/mk-duong/learning-materials/assets/151535478/fe1fc190-f085-45c3-b863-43929a57b540)
+  ![Screenshot (2593)](https://github.com/mk-duong/learning-materials/assets/151535478/a57f3f96-a792-4098-8a2e-cc3985621d47)
+
 
 - Task 4: Use the INDEX and MATCH function for the client who has several combinations in mind to help them choose the highest rated
 
   ```=INDEX(ColourMatrix, MATCH(AB13, ColoursWall, 0), MATCH(AC13, ColoursCeiling, 0))```
 
-  ![Screenshot (2580)](https://github.com/mk-duong/learning-materials/assets/151535478/1c21fad0-8796-41de-ba3a-12fabe774d24)
+  ![Screenshot (2590)](https://github.com/mk-duong/learning-materials/assets/151535478/dd2b163a-fb70-4716-84a9-1ce75d22f562)
+
 
