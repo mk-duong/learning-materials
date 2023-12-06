@@ -99,8 +99,7 @@ Work with CHOOSE, VLOOKUP, MATCH, and INDEX
 
   ```=CHOOSE(D3,Instructions!$C$27,Instructions!$C$28,Instructions!$C$29,Instructions!$C$30,Instructions!$C$31,Instructions!$C$32)```
   
-![Screenshot (2570)](https://github.com/mk-duong/learning-materials/assets/151535478/28277465-7478-4680-aabb-c65d03f46199)
-
+  ![Screenshot (2570)](https://github.com/mk-duong/learning-materials/assets/151535478/28277465-7478-4680-aabb-c65d03f46199)
 
 - Task 2: Use the VLOOKUP function to perform the grading of students who took a Basic Excel course
 
