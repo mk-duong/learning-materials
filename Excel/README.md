@@ -8,7 +8,7 @@
   + Advanced functions (SUMIF, COUNTIF, etc.)
   + Conditional functions (IF, AND, OR, etc.)
   + CONCAT, LEFT, RIGHT, TRIM, etc.
-  + Lookup functions (VLOOKUP/HLOOKUP, INDEX, MATCH)
+  + Lookup functions (CHOOSE, VLOOKUP/HLOOKUP, INDEX, MATCH)
     
 - Data validation:
   + Create validation
