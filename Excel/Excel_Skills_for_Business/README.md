@@ -98,7 +98,7 @@ Work with CHOOSE, VLOOKUP, MATCH, and INDEX
 
 - Task 1: Use the CHOOSE function to classify the star rating to its resoective category given in the table:
 
-  ```=CHOOSE(D3,Instructions!$C$27,Instructions!$C$28,Instructions!$C$29,Instructions!$C$30,Instructions!$C$31,Instructions!$C$32)```
+  ```==CHOOSE(D3,$C$15,$C$16,$C$17,$C$18,$C$19,$C$20)```
   
   ![Screenshot (2586)](https://github.com/mk-duong/learning-materials/assets/151535478/967ef625-bc74-47db-84a7-6d580282dcd2)
 
