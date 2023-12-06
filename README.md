@@ -4,8 +4,8 @@ Basic to advanced Excel exercises and analysis projects completed for on-campus 
   
 - **Excel Skills for Business:** [Exercise folder](https://github.com/mk-duong/learn-excel/tree/main/Excel%20Skills%20for%20Business%3A%20Intermediate%20I)
 
-## PowerBI
-Notes and exercises from Microsoft Learn and other online sources
+## PowerBI (on-going)
+Notes and exercises from Microsoft Learn and other online sources to prepare for the PL-300 certificate
 
-## TSQL
+## TSQL (on-going)
 Notes and exercises from the T-SQL Fundamentals (4th edition) textbook
