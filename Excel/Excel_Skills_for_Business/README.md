@@ -12,8 +12,8 @@
 
 ## Challenge 2
 **Note:** `@` reference appears because we're working in a table
-- Calculate the *ValTrade ($m)* using formula: `= [@Price] * [@Volume] / 1000000`
-- Calculate the *TradeRange (%)* using formula: `= ([@High] - [@Low]) / [@Price]`
+- Calculate the *ValTrade ($m)* using formula: `= [@Price]*[@Volume]/1000000`
+- Calculate the *TradeRange (%)* using formula: `= ([@High]-[@Low])/[@Price]`
   
 - Create **Total** row in a table
   
