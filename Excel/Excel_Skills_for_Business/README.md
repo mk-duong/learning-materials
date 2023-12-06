@@ -11,7 +11,7 @@
   ![Screenshot (2534)](https://github.com/mk-duong/learn-excel/assets/151535478/27ba932c-c61b-4c12-9a2a-68071249064b)
 
 ## Challenge 2
-**Note:** `@` reference appears because we're working in a table
+> **Note:** `@` reference appears because we're working in a table
 - Calculate the *ValTrade ($m)*: `=[@Price]*[@Volume]/1000000`
 - Calculate the *TradeRange (%)*: `=([@High]-[@Low])/[@Price]`
   
@@ -91,4 +91,34 @@ Use conditional functions (IF, AND, OR) and create nested IF functions
     ```=IF(Z6-AD6 >= AA6, "", IF(AD6 < AC6, "Order immediately for client", "Running low - think about reordering"))```
 
   ![Screenshot (2566)](https://github.com/mk-duong/learning-materials/assets/151535478/b0722439-1aec-452e-8474-f39b9266ff49)
+
+## Challenge 6
+Work with CHOOSE, VLOOKUP, MATCH, and INDEX
+
+- Task 1: Use the CHOOSE function to classify the star rating to its resoective category given in the table:
+
+  ```=CHOOSE(D3,Instructions!$C$27,Instructions!$C$28,Instructions!$C$29,Instructions!$C$30,Instructions!$C$31,Instructions!$C$32)```
+  
+![Screenshot (2570)](https://github.com/mk-duong/learning-materials/assets/151535478/28277465-7478-4680-aabb-c65d03f46199)
+
+
+- Task 2: Use the VLOOKUP function to perform the grading of students who took a Basic Excel course
+
+  > **Note:** If range_lookup is TRUE, then if the value in the lookup_value is smaller than the smallest value in the first column of the table_array, you'll get the #N/A error value.
+
+  ```=VLOOKUP(I3,$H$14:$J$18,3,TRUE)```
+
+  ![Screenshot (2573)](https://github.com/mk-duong/learning-materials/assets/151535478/ac243365-6691-49f9-a29a-c41876e96e9b)
+
+- Task3: Use an exact match VLOOKUP and MATCH to gauge the success of Brad's fishing expedition he is planning in March
+
+  ```=VLOOKUP(M3, $M$9:$Y$41, MATCH(N3, $M$8:$Y$8, 0), FALSE)```
+
+  ![Screenshot (2577)](https://github.com/mk-duong/learning-materials/assets/151535478/fe1fc190-f085-45c3-b863-43929a57b540)
+
+- Task 4: Use the INDEX and MATCH function for the client who has several combinations in mind to help them choose the highest rated
+
+  ```=INDEX(ColourMatrix, MATCH(AB13, ColoursWall, 0), MATCH(AC13, ColoursCeiling, 0))```
+
+  ![Screenshot (2580)](https://github.com/mk-duong/learning-materials/assets/151535478/1c21fad0-8796-41de-ba3a-12fabe774d24)
 
