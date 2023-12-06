@@ -4,11 +4,11 @@
   + Remove duplicates
     
 - Data transformation:
-  + Basic math functions (SUM, AVERAGE, etc.)
+  + Basic functions (SUM, AVERAGE, etc.)
   + Advanced functions (SUMIF, COUNTIF, etc.)
   + Conditional functions (IF, AND, OR, etc.)
-  + VLOOKUP/HLOOKUP
   + CONCAT, LEFT, RIGHT, TRIM, etc.
+  + Lookup functions (VLOOKUP/HLOOKUP, INDEX, MATCH)
     
 - Data validation:
   + Create validation
