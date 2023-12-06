@@ -67,11 +67,15 @@ Use conditional functions (IF, AND, OR) and create nested IF functions
 
     ```=SUM(G3:G12) - SUM(H3:H12)```
 
+  ![Screenshot (2562)](https://github.com/mk-duong/learning-materials/assets/151535478/b95fbce7-f097-49e5-b37d-e2f2db8e9f75)
+
 - Task 2:
   + Total sum of the final grades: `=SUM(L12:R12)`
   + Grade determination: 
   
     ```=IF(T12<=$P$4, "Fail", IF(T12<=$P$5, "Pass", IF(T12<=$P$6, "Credit", IF(T12<=$P$7, "Distinction", "High Distinction"))))```
+
+  ![Screenshot (2564)](https://github.com/mk-duong/learning-materials/assets/151535478/f3698c5f-bcd5-4116-9e3b-f35fa4e297b8)
 
 - Task 3:
   + Complete the *Delivery* column, delivering as much of the clients order as possible according to the amounts in stock:
@@ -85,4 +89,6 @@ Use conditional functions (IF, AND, OR) and create nested IF functions
   + The *Post Delivery Alerts* column, check whether the client is waiting on items and report "Order immediately for client". If the number of items remaining in stock after this order falls below the reorder level report "Running low - think about reordering":
 
     ```=IF(Z6-AD6 >= AA6, "", IF(AD6 < AC6, "Order immediately for client", "Running low - think about reordering"))```
-  
+
+  ![Screenshot (2566)](https://github.com/mk-duong/learning-materials/assets/151535478/b0722439-1aec-452e-8474-f39b9266ff49)
+
