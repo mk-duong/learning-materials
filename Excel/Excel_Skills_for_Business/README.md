@@ -12,8 +12,8 @@
 
 ## Challenge 2
 **Note:** `@` reference appears because we're working in a table
-- Calculate the *ValTrade ($m)* using formula: `= [@Price]*[@Volume]/1000000`
-- Calculate the *TradeRange (%)* using formula: `= ([@High]-[@Low])/[@Price]`
+- Calculate the *ValTrade ($m)*: `=[@Price]*[@Volume]/1000000`
+- Calculate the *TradeRange (%)*: `=([@High]-[@Low])/[@Price]`
   
 - Create **Total** row in a table
   
@@ -35,8 +35,8 @@
 - Create data validation with:
   + List, Whole Number, Decimal, Date
   + Custom formula
-     + Validate to avoid duplicated student number: `= COUNTIFS(Student_number, C8) <= 1`
-     + Validate to have the birth year not to have the students less  than 16 years old: `= YEAR(TODAY()) - J9 > 16`
+     + Validate to avoid duplicated student number: `=COUNTIFS(Student_number, C8) <= 1`
+     + Validate to have the birth year not to have the students less  than 16 years old: `=YEAR(TODAY()) - J9 > 16`
 
 - Advanced conditional formating:
   + Highlight the entire row of the students at the same Campus
@@ -47,3 +47,42 @@
   
   ![Screenshot (2554)](https://github.com/mk-duong/learning-materials/assets/151535478/d20e0157-0bb1-4ffb-b74d-ab3663465aa7)
 
+## Challenge 5
+Use conditional functions (IF, AND, OR) and create nested IF functions
+
+- Task 1:
+  + Calculate the *Purchase value*: `Price paid * Volume`
+
+    ```=D3*E3```
+
+  + Calculate the *Gain value*: `(Last price - Price paid) * Volume`
+
+    ```=IF((E3-D3)*C3 > 0, (E3-D3)*C3, 0)```
+
+  + Calculate the *Loss value*: `(Price paid - Last price) * Volumns`
+
+    ```=IF((D3-E3)*C3 > 0, (D3-E3)*C3, 0)```
+
+  + Calculate the *Net Gain (or Loss)*: `Gain value - Loss value`
+
+    ```=SUM(G3:G12) - SUM(H3:H12)```
+
+- Task 2:
+  + Total sum of the final grades: `=SUM(L12:R12)`
+  + Grade determination: 
+  
+    ```=IF(T12<=$P$4, "Fail", IF(T12<=$P$5, "Pass", IF(T12<=$P$6, "Credit", IF(T12<=$P$7, "Distinction", "High Distinction"))))```
+
+- Task 3:
+  + Complete the *Delivery* column, delivering as much of the clients order as possible according to the amounts in stock:
+
+    ```=IF(Z6 > AC6, AC6, Z6)```
+
+  + In the *Comment* column, place a comment "Partial fill - out of stock" for the items that could only be partly filled, due to not having enough in stock:
+
+    ```=IF(AD6 < AC6, "Partially filled - Out of stock", "")```
+
+  + The *Post Delivery Alerts* column, check whether the client is waiting on items and report "Order immediately for client". If the number of items remaining in stock after this order falls below the reorder level report "Running low - think about reordering":
+
+    ```=IF(Z6-AD6 >= AA6, "", IF(AD6 < AC6, "Order immediately for client", "Running low - think about reordering"))```
+  
