@@ -1418,9 +1418,9 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 - Configure RLS (static method)
     - **Create RLS roles**
         
-        ![Untitled](images/Untitled%2087.png)
+        ![Untitled 87](https://github.com/mk-duong/learning-materials/assets/151535478/c67224d9-506b-4260-ac31-329e0f45a94f)
         
-        ![Untitled](images/Untitled%2088.png)
+        ![Untitled 88](https://github.com/mk-duong/learning-materials/assets/151535478/640471f2-9262-4e7b-970e-55ee294636f9)
         
         → Apply the DAX filter to a **dimension table** (as was done with the Products table)
         
@@ -1428,18 +1428,16 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
         
     - **Test roles**
         
-        ![Untitled](images/Untitled%2089.png)
-        
+        ![Untitled 89](https://github.com/mk-duong/learning-materials/assets/151535478/594bda92-bbd0-4595-b54d-49731f09337c)
     
     - **Deploy the report to PBI service**
     - **Add members to the role in PBI service:** Go to your workspace in PBI service > Find the semantic model with the same name as your report > Select (**...**) button > **Security**
         
-        ![Untitled](images/Untitled%2090.png)
+        ![Untitled 90](https://github.com/mk-duong/learning-materials/assets/151535478/b26caccf-70af-4d41-aa34-76cdfa4f103e)
         
     - **Test roles in PBI Service**
         
-        ![Untitled](images/Untitled%2091.png)
-        
+        ![Untitled 91](https://github.com/mk-duong/learning-materials/assets/151535478/c86ab811-6bff-41a7-b67c-9b364c5f77cd)
     
 - Configure RLS (dynamic method)
     - ****Dynamic rules****
@@ -1448,7 +1446,7 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
     
     - **Create roles**
         
-        ![Untitled](images/Untitled%2092.png)
+        ![Untitled 92](https://github.com/mk-duong/learning-materials/assets/151535478/29fafc9c-086f-4f77-a531-d1546be6beea)
         
         → The `USERPRINCIPALNAME()` function will compare the email address from the Employees table with the email that the user entered when signing in to Power BI service. 
         
@@ -1483,6 +1481,6 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
         2. Publish it to PBI service
         3. When set the data source credentials in the PBI service → you [enable SSO](https://learn.microsoft.com/en-us/power-bi/connect-data/service-azure-sql-database-with-direct-connect)
             
-            ![Untitled](images/Untitled%2093.png)
-            
+            ![Untitled 93](https://github.com/mk-duong/learning-materials/assets/151535478/9f845aea-4618-460d-ac57-4bf2fed36135)
+
     - When report consumers open PBI reports, PBI passes their identity to the data source. The data source then enforces RLS based on the identity of the report consumer.
