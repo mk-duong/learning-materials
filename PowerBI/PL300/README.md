@@ -1413,6 +1413,76 @@ Go to a dashboard > Edit dropdown arrow > **Dashboard theme**
 
 ### Model security
 
-RLS → access to specific data row
+**RLS** → control access to specific data row
 
-Object-level security (OLS) → access to entire tables or columns
+- Configure RLS (static method)
+    - **Create RLS roles**
+        
+        ![Untitled](images/Untitled%2087.png)
+        
+        ![Untitled](images/Untitled%2088.png)
+        
+        → Apply the DAX filter to a **dimension table** (as was done with the Products table)
+        
+        → Keep the DAX filter as simple as possible
+        
+    - **Test roles**
+        
+        ![Untitled](images/Untitled%2089.png)
+        
+    
+    - **Deploy the report to PBI service**
+    - **Add members to the role in PBI service:** Go to your workspace in PBI service > Find the semantic model with the same name as your report > Select (**...**) button > **Security**
+        
+        ![Untitled](images/Untitled%2090.png)
+        
+    - **Test roles in PBI Service**
+        
+        ![Untitled](images/Untitled%2091.png)
+        
+    
+- Configure RLS (dynamic method)
+    - ****Dynamic rules****
+        - [`USERPRINCIPALNAME`](https://learn.microsoft.com/en-us/dax/userprincipalname-function-dax) – Returns the Power BI authenticated user as a text value.
+        - [`CUSTOMDATA`](https://learn.microsoft.com/en-us/dax/customdata-function-dax) – Returns the **CustomData** property passed in the connection string. Non-Power BI reporting tools that connect to the dataset by using a connection string can set this property, like Microsoft Excel.
+    
+    - **Create roles**
+        
+        ![Untitled](images/Untitled%2092.png)
+        
+        → The `USERPRINCIPALNAME()` function will compare the email address from the Employees table with the email that the user entered when signing in to Power BI service. 
+        
+        → If Russel King uses the email address `russel@tailwindtraders.com` to sign in to Power BI service, the system will compare that value to the email address in the Employees table. 
+        
+        → Assuming that a relationship has been created between dimension Employees and fact Sales, Russel will only see his four sales.
+        
+
+**Object-level security (OLS)** → control access to entire tables or columns; secure metadata
+
+- Set up OLS
+    
+    [Restrict access to Power BI model objects - Training](https://learn.microsoft.com/en-us/training/modules/enforce-power-bi-model-security/3-restrict-access-to-power-bi-model-objects)
+    
+
+****Set up role mappings****
+
+- Role mapping involves assigning Microsoft Entra security objects to roles.
+- Security objects can be user accounts or security groups.
+- For more information about setting up RLS, see:
+    - [Row-level security (RLS) with Power BI](https://learn.microsoft.com/en-us/power-bi/enterprise/service-admin-rls)
+    - [Row-level security (RLS) guidance in Power BI Desktop](https://learn.microsoft.com/en-us/power-bi/guidance/rls-guidance)
+    
+
+****Use single sign-on (SSO) for DirectQuery sources****
+
+- When your data model has DirectQuery tables and their data source supports SSO, the data source can enforce data permissions.
+- Consider that Adventure Works has an Azure SQL Database for their sales operations
+    - The database enforces RLS in various database tables.
+    - You can:
+        1. Create a DirectQuery model that connects to this database without roles
+        2. Publish it to PBI service
+        3. When set the data source credentials in the PBI service → you [enable SSO](https://learn.microsoft.com/en-us/power-bi/connect-data/service-azure-sql-database-with-direct-connect)
+            
+            ![Untitled](images/Untitled%2093.png)
+            
+    - When report consumers open PBI reports, PBI passes their identity to the data source. The data source then enforces RLS based on the identity of the report consumer.
