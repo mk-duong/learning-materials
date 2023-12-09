@@ -8,4 +8,4 @@ Basic to advanced Excel exercises and analysis projects completed for on-campus 
 Notes and exercises from Microsoft Learn and other online sources to prepare for the PL-300 certificate
 
 ## TSQL (on-going)
-Notes and exercises from the T-SQL Fundamentals (4th edition) textbook
+Notes and exercises from the T-SQL Fundamentals (4th edition) textbook to ehnhance knowledge on T-SQL
